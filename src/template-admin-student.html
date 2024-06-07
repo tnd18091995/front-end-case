@@ -34,7 +34,81 @@
                         <input class="form-control me-2 w-100" type="search" placeholder="Nhập Mã Lớp" aria-label="Search">
                         <button class="btn btn-outline-success mx-2 " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
-                    <button type="button" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Thêm mới</button>
+                    <!--Button Add-->
+                    <div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-user-plus"></i> Thêm mới
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nhập Thông Tin Sinh Viên Mới</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="fullName" class="form-label">Họ Và Tên</label>
+                                            <input class="form-control" id="fullName" placeholder="Ví dụ: Nguyen Van A">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="codeStudent" class="form-label">Mã Sinh Viên</label>
+                                            <input class="form-control" id="codeStudent" placeholder="Ví dụ: SV868686">
+                                        </div>
+                                        <div class="mb-3">
+                                            <fieldset data-role="controlgroup">
+                                                <div class="row col-md-12">
+                                                    <div class="col-md-3"><p>Giới Tính: </p></div>
+                                                    <div class="col-md-3">
+                                                        <label for="male">Nam</label>
+                                                        <input type="radio" name="gender" id="male" value="male" checked></div>
+                                                    <div class="col-md-3">
+                                                        <label for="female">Nữ</label>
+                                                        <input type="radio" name="gender" id="female" value="female">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="row col-md-12">
+                                                <div class="col-md-6">
+                                                    <label for="dateOfBirth" class="form-label">Ngày Tháng Năm Sinh </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input class="form-control"  type="date" name="bdaytime" id="dateOfBirth" placeholder="Chọn Ngày Tháng Năm Sinh">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" placeholder="Ví dụ: nguyenvana@gmail.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label>Số Điện Thoại</label>
+                                            <input  class="form-control" placeholder="Ví dụ: 0988-xxx-yyy">
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="row col-md-12">
+                                                <div class="col-md-6">
+                                                    <label for="classRoom">Mã Lớp</label>
+                                                    <input class="form-control" type="text" id="classRoom" placeholder="Ví dụ: MT-1111">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="nameClass">Tên Lớp</label>
+                                                    <input class="form-control" type="text" id="nameClass" placeholder="Ví dụ: A-2024">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+                                        <button type="button" class="btn btn-primary">Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Button Add-->
                 </nav>
             </div>
         </div>
@@ -97,7 +171,28 @@
                     <td>MT-1111</td>
                     <td>A-2024</td>
                     <td><button type="button" class="btn btn-success"><i class="fa-solid fa-user-pen"></i></button>
-                        <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                        <!--Modal Delete-->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-danger" id="staticBackdropLabel">CẢNH BÁO: Xoá Dữ Liệu Sinh Viên!!!</h1>
+                                        <butrningn type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></butrningn>
+                                    </div>
+                                    <div class="modal-body text-warning">
+                                        <p>Bạn có chắc chắn muốn xóa dữ liệu sinh viên này không? Hành động này không thể hoàn tác và tất cả thông tin liên quan sẽ bị mất vĩnh viễn.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ Bỏ</button>
+                                        <button type="button" class="btn btn-danger">Xác Nhận</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal Delete-->
                     </td>
                 </tr>
                 <tr>

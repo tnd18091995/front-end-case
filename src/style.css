@@ -26,7 +26,13 @@
 .form-login .form-floating:focus-within {
     z-index: 2;
 }
-#icon-search {
+#bg-admin{
 }
-#menu-admin {
+
+#bg-admin{
+    background: url(https://e0.pxfuel.com/wallpapers/141/332/desktop-wallpaper-education-education-education-technology.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
